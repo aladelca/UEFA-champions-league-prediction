@@ -1,0 +1,44 @@
+api_version: v1
+objective: multiclass
+primary_metric: log_loss
+candidate_models:
+- name: catboost
+  priority: 1
+  params:
+    loss_function: MultiClass
+    random_seed: 42
+    verbose: 0
+- name: logistic_regression
+  priority: 2
+  params:
+    multi_class: multinomial
+    max_iter: 2000
+    random_state: 42
+- name: hist_gradient_boosting
+  priority: 3
+  params:
+    random_state: 42
+- name: xgboost
+  priority: 4
+  params:
+    objective: multi:softprob
+    eval_metric: mlogloss
+    random_state: 42
+calibration:
+  enabled: true
+  method_candidates:
+  - sigmoid
+  - isotonic
+simulation:
+  n_simulations_default: 10000
+  random_seed_default: 42
+selected_principal_experiment:
+  exp_id: EXP-021
+  feature_variant: extended_fe
+  model_name: random_forest
+  params:
+    n_estimators: 250
+    max_depth: 10
+    min_samples_leaf: 2
+  metric: cv_log_loss_mean
+  score: 0.9556876898135033

@@ -1,0 +1,23 @@
+api_version: "v1"
+test_season: 2021
+rolling_origin:
+  enabled: true
+  min_train_seasons: 5
+  step: 1
+metrics:
+  match_level:
+    - "log_loss"
+    - "brier_score"
+    - "macro_f1"
+  champion_level:
+    - "brier_score"
+    - "hit_at_1"
+    - "hit_at_4"
+leakage_gates:
+  require_all: true
+  checks:
+    - "temporal_order"
+    - "no_post_match_columns"
+    - "fit_only_on_train"
+    - "preseason_only_past_data"
+    - "source_is_csv_only"

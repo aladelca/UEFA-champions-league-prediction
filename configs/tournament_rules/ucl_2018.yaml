@@ -1,0 +1,21 @@
+exceptions:
+  away_goals_removed: false
+  quarterfinal_one_leg: false
+  semifinal_one_leg: false
+format: ucl_32_teams
+group_stage:
+  double_round_robin: true
+  group_size: 4
+  groups: 8
+knockout:
+  away_goals_rule: true
+  final:
+    neutral: true
+    two_legged: false
+  quarterfinals:
+    two_legged: true
+  round_of_16:
+    two_legged: true
+  semifinals:
+    two_legged: true
+season: 2018

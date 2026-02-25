@@ -1,0 +1,31 @@
+api_version: "v1"
+inference_mode: "preseason"
+allowed_data_sources:
+  - "data/raw/df.csv"
+target:
+  match: "y_match"
+  champion: "p_champion"
+feature_sets:
+  pre_match:
+    - "home_flag"
+    - "elo_home"
+    - "elo_away"
+    - "elo_diff"
+    - "form_points_home_last5"
+    - "form_points_away_last5"
+    - "goal_diff_home_last5"
+    - "goal_diff_away_last5"
+blocked_columns:
+  - "score"
+  - "score_opp"
+  - "result"
+  - "Gls"
+  - "W"
+  - "GA"
+  - "PPM"
+  - "onG"
+leakage_guardrails:
+  temporal_split: true
+  feature_t_minus_1: true
+  fit_only_on_train: true
+  preseason_no_current_season_results: true
