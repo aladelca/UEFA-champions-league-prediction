@@ -1,0 +1,12 @@
+# Python / entorno local
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Artefactos de modelado y datos generados
+*.csv
+*.joblib
+
+# Salidas de entrenamiento
+catboost_info/
