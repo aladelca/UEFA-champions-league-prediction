@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Ticket Executor"
+  short_description: "Plan, execute, and close ticketed work with status tracking"
+  default_prompt: "Break work into explicit tickets, execute incrementally, and update ticket statuses as tasks complete."
