@@ -7,6 +7,7 @@ __pycache__/
 # Artefactos de modelado y datos generados
 *.csv
 *.joblib
+artifacts/reports/
 
 # Salidas de entrenamiento
 catboost_info/
