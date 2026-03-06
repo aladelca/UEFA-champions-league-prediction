@@ -1,4 +1,4 @@
-# UCL Champion Prediction (sin leakage)
+# UCL Champion Prediction
 
 Proyecto para estimar `P(campeon)` de Champions League usando:
 
